@@ -1,8 +1,9 @@
- function App() {
+import Jogo from "./Jogo"
+function App() {
   return (
-    <div>
-      <h1> codigo padrão limpo </h1>
-    </div>
+    <>
+      <Jogo />
+    </>
   );
 }
 
