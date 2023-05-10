@@ -1,0 +1,2 @@
+import "./Letras"
+import "./palavras"
