@@ -23,5 +23,6 @@ const palavras = [
     "xadrez", "xilofone", "xarope", "xenofobia", "xereta", "xerife", "xaveco", "xixi", "xale",
     "zebra", "zagueiro", "zero", "zoeira", "zepelim", "zinco", "zumbido"
 ]
-
-export default palavras
+const p =  Math.floor(Math.random()*palavras.length)
+const palavra = palavras[p]
+export default palavra

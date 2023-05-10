@@ -1,20 +1,28 @@
-import "./Letras"
-import "./palavras"
+import alfabeto from "./Letras"
+import palavras from "./Palavras"
 
-export default function Jogo(){
+export default function Jogo(props){
+    const palavra =  Math.floor(Math.random()*palavras.length)
+
     const forca = [
-        <img src="./assets/forca0.png" class ="image"/>,
-        <img src="./assets/forca1.png"/>,
-        <img src="./assets/forca2.png"/>,
-        <img src="./assets/forca3.png"/>,
-        <img src="./assets/forca4.png"/>,
-        <img src="./assets/forca5.png"/>,
-        <img src="./assets/forca6.png"/>
+        "./assets/forca0.png",
+        "./assets/forca1.png",
+        "./assets/forca2.png",
+        "./assets/forca3.png",
+        "./assets/forca4.png",
+        "./assets/forca5.png",
+        "./assets/forca6.png"
     ]
-    const [forca0,forca1,forca2,forca3,forca4,forca5,forca6] = forca;
+    const forcaHTML = forca.map(function (image){return (<img src={image} class ="image"/>)})
+    const enforcado = forcaHTML[props.tentativa]
     return(
         <>
-            {forca[0]}
+            <div class="">
+                {enforcado}
+                <button class ='startbutton'>{props.tentativa}</button>
+                <button>{props.palavra}</button>
+
+            </div>
         </>
     )
 }

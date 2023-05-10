@@ -1,9 +1,15 @@
-body{
-    background-color: #39739D;
+.container{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: 100vh;
 }
 .image{
-    width: 25vw;
-    height: 25vh;
+    width: 400px;
+    height: 467px;
 }
 .startbutton{
     width: 200px;
@@ -12,7 +18,7 @@ body{
     border-radius: 8px;
 }
 .alfaBet_desatived{
-    box-sizing: border-box;
+    flex-wrap: wrap;
     width: 40px;
     height: 40px;
     background: #9FAAB5;
@@ -26,8 +32,8 @@ body{
     display: flex;
     align-items: center;
     text-align: center;
-    
     color: #798A9F;
+    margin: 12px;
 }
 .alfaBet_atived{
     width: 40px;
@@ -54,4 +60,10 @@ body{
     align-items: center;
     text-align: center;
     color: #000000;
+}
+.sopa{
+    height: 120px;
+    width: 100%;
+    display: grid;
+    grid-template-rows:auto
 }
