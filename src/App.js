@@ -4,10 +4,9 @@ import AlfabetoHTML from "./Letras";
 import palavra from "./Palavras"
 function App() {
   const [tentativa,setTentativa] = useState(0)
-  const [secret,setSecret] = useState('')
+  const [secret,setSecret] = useState(palavra)
   const[letras_usadas,setUsadas]=useState([])
   const [iniciar,setIniciar] = useState(false)
-  const [palavra,setPalavra] = useState('')
   return (
     <div class='container'>
       <Jogo secret={secret} setSecret={setSecret} tentativa ={tentativa} setTentativa ={setTentativa} setIniciar={setIniciar} iniciar={iniciar}/>
