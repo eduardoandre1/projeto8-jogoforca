@@ -2,17 +2,16 @@ import { useState } from "react";
 import Jogo from "./Jogo"
 import AlfabetoHTML from "./Letras";
 import palavra from "./Palavras"
-//let [tentativa,setTentativa] = useState(0)
-//let tentativa = prompt("QUANTAS TENTATISCAS")
 function App() {
-  //let  [tentativa,setTentativa] =useState(0)
-  //setTentativa(0)
-  const tentativa = 1
+  const [tentativa,setTentativa] = useState(0)
+  const [secret,setSecret] = useState('')
+  const[letras_usadas,setUsadas]=useState([])
+  const [iniciar,setIniciar] = useState(false)
+  const [palavra,setPalavra] = useState('')
   return (
     <div class='container'>
-      <Jogo palavra={palavra} tentativa ={tentativa}/>
-      <AlfabetoHTML />
-      <h1></h1>
+      <Jogo secret={secret} setSecret={setSecret} tentativa ={tentativa} setTentativa ={setTentativa} setIniciar={setIniciar} iniciar={iniciar}/>
+      <AlfabetoHTML letras_usadas={letras_usadas} setUsadas={setUsadas}/>    
     </div>
   );
 }

@@ -5,7 +5,8 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    height: 100vh;
+    height: 98vh;
+    margin-top: 16px;
 }
 .image{
     width: 400px;
@@ -16,6 +17,7 @@
     height: 60px;
     background: #27AE60;
     border-radius: 8px;
+    color: #fff;
 }
 .alfaBet_desatived{
     flex-wrap: wrap;
@@ -33,7 +35,8 @@
     align-items: center;
     text-align: center;
     color: #798A9F;
-    margin: 12px;
+    margin-top: 5px;
+    margin-left: 15px;
 }
 .alfaBet_atived{
     width: 40px;
@@ -48,8 +51,8 @@
     text-align: center;
     color: #39739D;
 }
-.secret-word{
-    width: 323px;
+.secret{
+    width: 400px;
     height: 68px;
     font-family: 'Noto Sans';
     font-style: normal;
@@ -63,7 +66,24 @@
 }
 .sopa{
     height: 120px;
-    width: 100%;
-    display: grid;
-    grid-template-rows:auto
+    width: 90%;
+    display: flex;
+    flex-wrap:wrap;
+    margin-left: auto;
+    margin-right: auto; 
+}
+.palavra_and_botão{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-top: 20px;
+    height: 90%;
+
+
+}
+.jogo{
+    height: 467px;
+    width: 1000px;
+    display: flex;
+    justify-content: space-between;
 }
