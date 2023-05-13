@@ -31,7 +31,14 @@ export default function AlfabetoHTML(props){
         <div class="sopa">
             {alfabeto.map(function(letra)
             {
-                return(<button class={props.iniciar===true?ativo:desativo} id={letra} disabled={props.iniciar===true?false:true} onClick={()=>mandar(letra)}>{letra}</button>)})}
+                return(<button 
+                    class={props.iniciar===true?ativo:desativo} 
+                    id={letra} 
+                    disabled={props.iniciar===true?false:true} 
+                    onClick={()=>mandar(letra)}
+                    data-test="letter"
+                        >{letra}
+                    </button>)})}
         </div>
     )
 }
