@@ -40,8 +40,12 @@
     justify-content: center;
 }
 .alfaBet_atived{
+    flex-wrap: wrap;
     width: 40px;
     height: 40px;
+    background: blue;
+    border: 1px solid #7AA7C7;
+    border-radius: 3px;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
@@ -50,7 +54,10 @@
     display: flex;
     align-items: center;
     text-align: center;
-    color: #39739D;
+    color: #798A9F;
+    margin-top: 5px;
+    margin-left: 15px;
+    justify-content: center;
 }
 .secret{
     width: 400px;

@@ -1,16 +1,20 @@
 import { useState } from "react";
 import Jogo from "./Jogo"
 import AlfabetoHTML from "./Letras";
-import palavra from "./Palavras"
+import Palavras from "./Palavras"
 function App() {
+  const palavra = Palavras[Math.floor(Math.random()*Palavras.length)]
   const [tentativa,setTentativa] = useState(0)
-  const [secret,setSecret] = useState(palavra)
+  const[codigo,setCodigo] = useState(palavra.split(""))
+  const [secret,setSecret] = useState("eduardo")
   const[letras_usadas,setUsadas]=useState([])
   const [iniciar,setIniciar] = useState(false)
+  const variaveis ={tentativa:tentativa,
+    codigo:codigo,secret:secret,}
   return (
     <div class='container'>
-      <Jogo secret={secret} setSecret={setSecret} tentativa ={tentativa} setTentativa ={setTentativa} setIniciar={setIniciar} iniciar={iniciar}/>
-      <AlfabetoHTML letras_usadas={letras_usadas} setUsadas={setUsadas}/>    
+      <Jogo codigo={codigo} setCodigo={setCodigo} Palavras={Palavras} letras_usadas={letras_usadas} secret={secret} setSecret={setSecret} tentativa ={tentativa} setTentativa ={setTentativa} setIniciar={setIniciar} iniciar={iniciar}/>
+      <AlfabetoHTML tentativa={tentativa} setTentativa={setTentativa}codigo={codigo} secret={secret} setSecret={setSecret} letras_usadas={letras_usadas} setUsadas={setUsadas}  iniciar={iniciar}/>    
     </div>
   );
 }
