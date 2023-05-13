@@ -15,8 +15,14 @@ export default function AlfabetoHTML(props){
         }
         console.log(props.codigo)
         console.log(props.secret)
-        if(tem_letra = false){
+        if(tem_letra == false){
             props.setTentativa(props.tentativa+1)
+        }
+        if(props.tentativa==5){
+            props.setIniciar(false)
+            props.setTentativa(0)
+            props.setcodigo(props.Palavras[Math.floor(Math.random()*Palavras.length).split('')])
+
         }
         console.log(props.tentativa)
     }
