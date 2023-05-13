@@ -2,6 +2,12 @@ export default function AlfabetoHTML(props){
     const alfabeto = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
     const ativo = "alfaBet_atived"
     const desativo ="alfaBet_desatived"
+    function desativar(letra){
+        let block = false
+        props.letras_usadas.map((l)=> if(l==letra){
+            block = true
+        })
+    }
     function mandar(letra){
         props.setUsadas([...props.letras_usadas,letra])
         let tem_letra = false
