@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Jogo from "./Jogo"
 import AlfabetoHTML from "./Letras";
-import palavras from "./Palavras";
+import palavras from "./palavras";
 function App(props) {
   const palavra = palavras[Math.floor(Math.random()*palavras.length)]
   const [tentativa,setTentativa] = useState(0)
