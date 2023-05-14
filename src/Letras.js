@@ -4,7 +4,13 @@ export default function AlfabetoHTML(props){
     const ativo = "alfaBet_atived"
     const desativo ="alfaBet_desatived"
     function desativar(letra){
-        
+        let situação = false
+        for(let i=0;i< props.letras_usadas.length;i++){
+            if(props.letras_usadas[i]==letra){
+                situação = true
+            }
+        }
+        return situação
     }
     function heaven_or_hell(){
         if(props.tentativa ==5){
@@ -39,6 +45,7 @@ export default function AlfabetoHTML(props){
         }
         heaven_or_hell()
         console.log(props.tentativa)
+        console.log(props.letras_usadas)
     }
     
 
@@ -49,9 +56,9 @@ export default function AlfabetoHTML(props){
                 return(<button 
                     className={props.iniciar===true?ativo:desativo} 
                     id={letra}
-                    key={letra} 
-                    disabled={props.iniciar===true?false:true} 
+                    key={letra}  
                     onClick={()=>mandar(letra)}
+                    disabled={desativar(letra)==true?true:false}
                     data-test="letter"
                         >{letra}
                     </button>)})}
