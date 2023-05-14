@@ -16,14 +16,13 @@ export default function AlfabetoHTML(props){
         if(props.tentativa ==5){
             props.setHoH(false)
             props.setIniciar(false)
-
             props.setCodigo(palavras[Math.floor(Math.random()*palavras.length)].split(''))
-            console.log('derrota')
         }
         if(props.codigo.toString() == props.secret.toString()){
             props.setHoH(true)
             props.setIniciar(false)
             props.setCodigo(palavras[Math.floor(Math.random()*palavras.length)].split(''))
+
         }
     }
 
