@@ -12,7 +12,7 @@ function App(props) {
   const variaveis ={tentativa:tentativa,
     codigo:codigo,secret:secret,}
   return (
-    <div class='container'>
+    <div className='container'>
       <Jogo codigo={codigo} setCodigo={setCodigo} Palavras={palavras} letras_usadas={letras_usadas} secret={secret} setSecret={setSecret} tentativa ={tentativa} setTentativa ={setTentativa} setIniciar={setIniciar} iniciar={iniciar}/>
       <AlfabetoHTML Palavras={palavras} setIniciar={setIniciar} tentativa={tentativa} setTentativa={setTentativa}codigo={codigo} secret={secret} setSecret={setSecret} letras_usadas={letras_usadas} setUsadas={setUsadas}  iniciar={iniciar}/>    
     </div>
