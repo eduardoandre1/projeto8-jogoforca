@@ -23,6 +23,7 @@ function App(props) {
         letras_usadas={letras_usadas} 
         secret={secret} 
         setSecret={setSecret} 
+        setUsadas={setUsadas}
         tentativa ={tentativa} 
         setTentativa ={setTentativa} 
         setIniciar={setIniciar} 
