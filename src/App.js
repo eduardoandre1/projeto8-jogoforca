@@ -29,6 +29,7 @@ function App(props) {
         setIniciar={setIniciar} 
         iniciar={iniciar}/>
       <AlfabetoHTML 
+        heavenorhell={heavenorhell}
         setHoH={setHoH} 
         Palavras={palavras} 
         setIniciar={setIniciar} 

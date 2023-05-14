@@ -5,6 +5,10 @@ export default function AlfabetoHTML(props){
     const desativo ="alfaBet_desatived"
     function desativar(letra){
         let situação = false
+        if(props.heavenorhell!==""){
+            situação = true
+            return situação
+        }
         for(let i=0;i< props.letras_usadas.length;i++){
             if(props.letras_usadas[i]==letra){
                 situação = true
@@ -22,7 +26,6 @@ export default function AlfabetoHTML(props){
             props.setHoH(true)
             props.setIniciar(false)
             props.setCodigo(palavras[Math.floor(Math.random()*palavras.length)].split(''))
-
         }
     }
 
