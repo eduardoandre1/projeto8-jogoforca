@@ -1,12 +1,10 @@
+import palavras from "./Palavras"
 export default function AlfabetoHTML(props){
     const alfabeto = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
     const ativo = "alfaBet_atived"
     const desativo ="alfaBet_desatived"
     function desativar(letra){
-        let block = false
-        props.letras_usadas.map((l)=> if(l==letra){
-            block = true
-        })
+        
     }
     function mandar(letra){
         props.setUsadas([...props.letras_usadas,letra])
@@ -27,7 +25,7 @@ export default function AlfabetoHTML(props){
         if(props.tentativa==5){
             props.setIniciar(false)
             props.setTentativa(0)
-            props.setcodigo(props.Palavras[Math.floor(Math.random()*Palavras.length).split('')])
+            props.setcodigo(palavras[Math.floor(Math.random()*palavras.length).split('')])
 
         }
         console.log(props.tentativa)
