@@ -6,6 +6,22 @@ export default function AlfabetoHTML(props){
     function desativar(letra){
         
     }
+    function heaven_or_hell(){
+        if(props.tentativa ==5){
+            props.setHoH(false)
+            props.setIniciar(false)
+            props.setTentativa(0)
+            props.setCodigo(palavras[Math.floor(Math.random()*palavras.length)].split(''))
+        }
+        if(props.codigo == props.secret){
+            props.setHoH(true)
+            props.setIniciar(false)
+            props.setTentativa(0)
+            props.setCodigo(palavras[Math.floor(Math.random()*palavras.length)].split(''))
+            alert('vitoria')
+        }
+    }
+
     function mandar(letra){
         props.setUsadas([...props.letras_usadas,letra])
         let tem_letra = false
@@ -22,14 +38,10 @@ export default function AlfabetoHTML(props){
         if(tem_letra == false){
             props.setTentativa(props.tentativa+1)
         }
-        if(props.tentativa==5){
-            props.setIniciar(false)
-            props.setTentativa(0)
-            props.setcodigo(palavras[Math.floor(Math.random()*palavras.length).split('')])
-
-        }
+        heaven_or_hell()
         console.log(props.tentativa)
     }
+    
 
     return(
         <div className="sopa">
