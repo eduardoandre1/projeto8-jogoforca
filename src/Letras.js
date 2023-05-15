@@ -10,19 +10,19 @@ export default function AlfabetoHTML(props){
             return situação
         }
         for(let i=0;i< props.letras_usadas.length;i++){
-            if(props.letras_usadas[i]==letra){
+            if(props.letras_usadas[i]===letra){
                 situação = true
             }
         }
         return situação
     }
     function heaven_or_hell(){
-        if(props.tentativa ==5){
+        if(props.tentativa ===5){
             props.setHoH(false)
             props.setIniciar(false)
             props.setCodigo(palavras[Math.floor(Math.random()*palavras.length)].split(''))
         }
-        if(props.codigo.toString() == props.secret.toString()){
+        if(props.codigo.toString() === props.secret.toString()){
             props.setHoH(true)
             props.setIniciar(false)
             props.setCodigo(palavras[Math.floor(Math.random()*palavras.length)].split(''))
@@ -42,7 +42,7 @@ export default function AlfabetoHTML(props){
         }
         console.log(props.codigo)
         console.log(props.secret)
-        if(tem_letra == false){
+        if(tem_letra === false){
             props.setTentativa(props.tentativa+1)
         }
         heaven_or_hell()
@@ -60,7 +60,7 @@ export default function AlfabetoHTML(props){
                     id={letra}
                     key={letra}  
                     onClick={()=>mandar(letra)}
-                    disabled={desativar(letra)==true?true:false}
+                    disabled={desativar(letra)===true?true:false}
                     data-test="letter"
                         >{letra}
                     </button>)})}

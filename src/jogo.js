@@ -9,22 +9,44 @@ export default function Jogo(props){
         "./assets/forca5.png",
         "./assets/forca6.png"
     ]
-    const forcaHTML = forca.map(function (image){return (<img data-test="game-image" src={image} className ="image"/>)})
-    const enforcado = forcaHTML[props.tentativa]
-    const palavra = props.Palavras[Math.floor(Math.random()*props.Palavras.length)]
-
+    function classe(){
+    const vitoria = "secret vitoria"
+    const derrota = "secret derrota"
+    const neutro = "secret neutro"
+    console.log(props.heavenorhell)
+    let resultado = neutro
+    switch (props.heavenorhell){
+        case "": 
+            resultado = neutro
+            break
+        case false: 
+            resultado = derrota;
+            break;
+        case true: 
+            resultado = vitoria;
+            break;
+        default:
+            resultado = neutro
+            break
+        }
+        return resultado
+    }
+    const classe1 = classe()
     function começar(iniciar){
         props.setIniciar(true)
+        props.setTentativa(0)
         let senha = props.codigo
         let secret_word = senha.map(function(l){return("_ ")})
         props.setSecret(secret_word)
         console.log(props.codigo)
+        props.setHoH('')
+        props.setUsadas([])
 
     }
     return(
         <>
             <div className="jogo">
-                {enforcado}
+            <img data-test="game-image" src={forca[props.tentativa]} className ="image"/>
                 <div className="palavra_and_botão">
                     <button 
                         className ='startbutton'
@@ -32,8 +54,11 @@ export default function Jogo(props){
                         onClick={()=>{começar()}}
                         data-test="choose-word">
                             Escolher Palavra
-                     </button>
-                    <h1 className="secret">
+                    </button>
+                    <h2 className="secret">
+                        tentativas :{props.iniciar==true?6-props.tentativa:""}
+                    </h2>
+                    <h1 className={classe1}>
                         {props.secret}
                     </h1>
                 </div>

@@ -9,9 +9,8 @@ function App(props) {
   const [secret,setSecret] = useState("")//palavar mostrada
   const[letras_usadas,setUsadas]=useState([])
   const [iniciar,setIniciar] = useState(false)
-  const [heavenorhell,setHoH] = useState('')
-  const variaveis ={tentativa:tentativa,
-    codigo:codigo,secret:secret,}
+  const [heavenorhell,setHoH] = useState('primeiro')
+
   return (
     <div className='container'>
       <Jogo 
