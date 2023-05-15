@@ -56,6 +56,7 @@ export default function Jogo(props){
                         >
                             Escolher Palavra
                     </button>
+                    <h2 className="secret">{props.heavenorhell==false?props.codigo:""}
                     <h2 className="secret">
                         tentativas :{props.iniciar===true?6-props.tentativa:""}
                     </h2>
