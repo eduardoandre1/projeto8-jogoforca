@@ -1,4 +1,4 @@
-import palavra from "./palavras"
+
 export default function Jogo(props){
     const forca = [
         "./assets/forca0.png",
@@ -49,10 +49,11 @@ export default function Jogo(props){
             <img data-test="game-image" src={forca[props.tentativa]} className ="image"/>
                 <div className="palavra_and_botão">
                     <button 
+                        data-test="choose-word"
                         className ='startbutton'
                         disabled={props.iniciar===true?true:false}
                         onClick={()=>{começar()}}
-                        data-test="choose-word">
+                        >
                             Escolher Palavra
                     </button>
                     <h2 className="secret">
