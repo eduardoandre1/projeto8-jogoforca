@@ -46,7 +46,7 @@ export default function Jogo(props){
     return(
         <>
             <div className="jogo">
-            <img data-test="game-image" src={forca[props.tentativa]} className ="image"/>
+            <img data-test="game-image" src={forca[props.tentativa]} className ="image" alt={forca[props.tentativa]}/>
                 <div className="palavra_and_botão">
                     <button 
                         data-test="choose-word"
@@ -57,7 +57,7 @@ export default function Jogo(props){
                             Escolher Palavra
                     </button>
                     <h2 className="secret">
-                        tentativas :{props.iniciar==true?6-props.tentativa:""}
+                        tentativas :{props.iniciar===true?6-props.tentativa:""}
                     </h2>
                     <h1 className={classe1}>
                         {props.secret}
