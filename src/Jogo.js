@@ -33,6 +33,7 @@ export default function Jogo(props){
     }
     const classe1 = classe()
     function começar(iniciar){
+        props.setCodigo(palavras[Math.floor(Math.random()*palavras.length)].split(''))
         props.setIniciar(true)
         props.setTentativa(0)
         let senha = props.codigo
