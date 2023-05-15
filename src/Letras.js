@@ -56,12 +56,12 @@ export default function AlfabetoHTML(props){
             {alfabeto.map(function(letra)
             {
                 return(<button 
+                    data-test="letter"
                     className={props.iniciar===true?ativo:desativo} 
                     id={letra}
                     key={letra}  
                     onClick={()=>mandar(letra)}
                     disabled={desativar(letra)===true?true:false}
-                    data-test="letter"
                         >{letra}
                     </button>)})}
         </div>
