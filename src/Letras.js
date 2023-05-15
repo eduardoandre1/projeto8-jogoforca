@@ -58,7 +58,7 @@ export default function AlfabetoHTML(props){
             {
                 return(<button 
                     data-test="letter"
-                    className={props.iniciar===true?ativo:desativo} 
+                    className={desativar(letra)===true?desativo:ativo} 
                     id={letra}
                     key={letra}  
                     onClick={()=>mandar(letra)}
